@@ -1,0 +1,287 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Bitter", serif;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+.nav {
+	background-color: #888F7C;
+	height: 100%;
+	width: 200px;
+	position: fixed;
+}
+
+.main {
+	background-color: lightgrey;
+	margin-left: 200px;
+}
+
+
+/*start home selection*/
+.banner {
+	height: 100vh;
+	background-color: skyblue;
+	position: relative;
+	z-index: 10;
+	background-image: url("https://www.rei.com/adventures/assets/adventures/images/trip/gallery/europe/lcs_12");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+h1 {
+	letter-spacing: 2px;
+	margin-bottom: 10px;
+	color: rgba(97,203,217, 1);
+	background-color: rgba(0,0,0, 0.75);
+	padding: 10px;
+	border-radius: 10px;
+}
+
+/*end home*/
+
+/*start register section*/
+
+.register {
+	height: 100vh;
+	background-color: #B9B987;
+	position: relative;
+}
+
+form {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	background-color: rgba(255,255,255, 0.75);
+	padding: 30px;
+	border-radius: 10px;
+	color: black;
+}
+
+.form-control {
+	width: 100%;
+	height: 30px;
+	margin-bottom: 15px;
+	border-radius: 5px;
+}
+
+.alert {
+	background-color: green;
+	color: white;
+	text-align: center;
+	padding: 5px;
+	width: 50%;
+	margin: 0 auto;
+	/*visibility: hidden;*/
+	display: none;
+}
+
+#email-alert {
+	background-color: red;
+	color: white;
+	text-align: center;
+	padding: 5px;
+	width: 50%;
+	margin: 0 auto;
+	/*visibility: hidden;*/
+	display: none;
+}
+
+#name:focus {
+	background-color: lightblue;
+}
+
+#email:focus {
+	background-color: lightblue;
+}
+
+#name:focus ~.alert {
+	display: block;
+	color: black;
+	background-color: green;
+	/*visibility: visible;*/
+}
+
+
+#email:focus ~#email-alert {
+	display: block;
+	color: black;
+	background-color: red;
+	/*visibility: visible;*/
+}
+
+#pass:focus {
+	background-color: yellow;
+}
+
+/*read on display block and display none*/
+/*read on visibility hidden and visibility visible*/
+
+/*end register*/
+
+.services {
+	height: 100vh;
+	background-color: #9B9B64;
+}
+
+.projects {
+	height: 100vh;
+	background-color: #6D6D46;
+}
+
+.gallery {
+	height: 100vh;
+	background-color: #3E3E28;
+}
+
+/*child selector*/
+ul > li {
+	list-style: none;
+	background-color: #C1D657;
+	margin-bottom: 10px;
+	text-align: center;
+	font-size: 16px;
+	line-height: 48px;
+	border-top-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+	border: 3px solid #333;
+	border-color: white;
+}
+
+ul > li > a{
+	text-decoration: none;
+	color: black;
+	font-weight: 700;
+}
+
+/*start nav*/
+.nav,
+.banner,
+.register,
+.services,
+.projects,
+.gallery {
+	padding: 30px;
+}
+/*end nav*/
+
+.logo {
+	height: 140px;
+	width: 140px;
+	margin: 0 auto;
+	border-radius: 100%;
+	margin-bottom: 16px;
+	border: 2px solid #333;
+	border-color: white;
+}
+
+.box > p {
+	font-family: 'Raleway', sans-serif;
+	font-size: 12px;
+}
+
+.box {
+	text-align: center;
+	width: 50%;
+	padding: 40px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.banner:hover ~ #back {
+	z-index: -100;
+
+}
+
+#back {
+	position: fixed;
+	bottom: 5%;
+	right: 5%; 
+	width: 100px;
+	height: 30px;
+	background-color: white;
+	text-align: center;
+	border-radius: 5px;
+	color: green;
+	border: 2px solid green;
+}
+
+ul > li:hover {
+	background-color: white;
+	border: 3px solid lightgreen;
+	transition: 1s;
+}
+
+ul > li:hover > a {
+	color: black;
+}
+
+.btn-block {
+	background-color: green;
+	color: white;
+	text-align: center;
+	width: 100%;
+	padding: 10px 30px;
+	margin: 0 auto;
+	border-radius: 5px;
+}
+
+p {
+	color: black;
+	text-align: center;
+	font-size: xx-large;
+	width: 40%;
+	border-radius: 5px;
+	margin: 0 auto;
+}
+
+#stock {
+	padding: 20px;
+}
+
+.photo {
+	height: 25%;
+	width: 25%;
+	float: left;
+	margin: 20px;
+}
+
+.bg {
+	height: 50px;
+	width: 200px;
+	background-color: white;
+	padding: 10px;
+}
+
+.paragraph {
+	font-size: 20px;
+	background-color: white;
+	padding: 20px;
+}
+
+.class {
+	padding-top: 50px;
+}
+
+@media only screen and (max-width: 400px) {
+	.nav {
+		display: none;
+	}
+}
+
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+	.nav {
+		display: none;
+	}
+	.main {
+		margin-left: 0;
+	}
+}
